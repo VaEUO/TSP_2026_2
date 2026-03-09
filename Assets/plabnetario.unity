@@ -5316,12 +5316,12 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1159551229}
         m_TargetAssemblyTypeName: EventUI, Assembly-CSharp
-        m_MethodName: CycleObjets
-        m_Mode: 1
+        m_MethodName: CycleText
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -5545,7 +5545,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Instrucci\xF3n 1\n\n"
+  m_text: "Instrucci\xF3n 1"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -5579,7 +5579,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -5610,7 +5610,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 0, z: -12.02549, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -6782,6 +6782,13 @@ MonoBehaviour:
   - {fileID: 1693865829}
   - {fileID: 1689264857}
   currentIndex: 0
+  mensajesInstrucciones:
+  - Mensaje 1
+  - Mensaje 2
+  - Mensaje 3
+  - Mensaje 4
+  - Mensaje 5
+  textMeshProUGUI: {fileID: 379427957}
 --- !u!4 &1159551230
 Transform:
   m_ObjectHideFlags: 0
@@ -7482,12 +7489,12 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1159551229}
         m_TargetAssemblyTypeName: EventUI, Assembly-CSharp
-        m_MethodName: CycleObjets
-        m_Mode: 1
+        m_MethodName: CycleText
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: -1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -7704,7 +7711,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1689264858
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7780,7 +7787,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1693865830
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7964,7 +7971,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1895414056
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7973,7 +7980,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1895414055}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.025001528}
+  m_LocalPosition: {x: 0, y: 0, z: -0.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

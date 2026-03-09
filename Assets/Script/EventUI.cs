@@ -47,10 +47,18 @@ public class EventUI : MonoBehaviour
     {
         SceneManager.LoadScene(sceneName);
     }
-    //Metodo para cambiar de paneles
-    public void CycleObjets()
+
+    //Recargar la escena actual
+    public void ReloadCurrentScene()
     {
-        currentIndex = (currentIndex + 1) % listaInstrucciones.Count;
+        Scene currentScene = SceneManager.GetActiveScene();
+        SceneManager.LoadScene(currentScene.buildIndex);
+    }
+
+    //Metodo para cambiar de paneles
+    public void CycleObjets(int direction)
+    {
+        currentIndex = (currentIndex + direction + listaInstrucciones.Count) % listaInstrucciones.Count;
         //Actualizar la visibilidad
         UpdateVisibility();
     }
@@ -59,13 +67,20 @@ public class EventUI : MonoBehaviour
 
     private void UpdateText()
     {
-        if (mensajesInstrucciones.Count > 0 )
+        if (mensajesInstrucciones.Count > 0 && textMeshProUGUI != null )
         {
-            
+            textMeshProUGUI.text = mensajesInstrucciones[currentIndex];
         }
     }
 
-    // Metodo par salir d ela aplicacion
+    public void CycleText(int direction)
+    {
+        currentIndex = (currentIndex + direction + mensajesInstrucciones.Count) % mensajesInstrucciones.Count;
+        //Actualizar la visibilidad
+        UpdateText();
+    }
+
+    // Metodo par salir de la aplicacion
     public void ExitGame()
     {
         Debug.Log("Va a asalir");
