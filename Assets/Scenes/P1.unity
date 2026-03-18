@@ -237,7 +237,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1578558564194034, guid: 50d56e9319acd7440a97582160b01520, type: 3}
       propertyPath: m_Name
-      value: Example1_Grey
+      value: Nave
       objectReference: {fileID: 0}
     - target: {fileID: 4416351815745354, guid: 50d56e9319acd7440a97582160b01520, type: 3}
       propertyPath: m_LocalPosition.x
@@ -295,6 +295,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1578558564194034, guid: 50d56e9319acd7440a97582160b01520, type: 3}
       insertIndex: -1
       addedObject: {fileID: 450659484}
+    - targetCorrespondingSourceObject: {fileID: 1578558564194034, guid: 50d56e9319acd7440a97582160b01520, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 450659487}
+    - targetCorrespondingSourceObject: {fileID: 1578558564194034, guid: 50d56e9319acd7440a97582160b01520, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 450659488}
   m_SourcePrefab: {fileID: 100100000, guid: 50d56e9319acd7440a97582160b01520, type: 3}
 --- !u!4 &450659482 stripped
 Transform:
@@ -379,11 +385,45 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &450659487
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 450659483}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8118dad1bedb67428287213a4c41258, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 50
+  rotationSpeed: 100
+  cameraTransform: {fileID: 1646041600}
+  movementInput: {x: 0, y: 0}
+  turbulenceIterations: 1000000
+--- !u!114 &450659488
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 450659483}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72357f7e7b1bb71499e1dad14298daae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 50
+  rotationSpeed: 100
+  cameraTransform: {fileID: 1646041600}
+  movementInput: {x: 0, y: 0}
+  turbulenceIterations: 1000000
 --- !u!1 &528177734
 GameObject:
   m_ObjectHideFlags: 0
@@ -1362,6 +1402,11 @@ PrefabInstance:
 --- !u!4 &1646041599 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6015652773065054413, guid: ee46d1c42c2ed9b4d935798044476bb0, type: 3}
+  m_PrefabInstance: {fileID: 1646041598}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1646041600 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5111144331297337872, guid: ee46d1c42c2ed9b4d935798044476bb0, type: 3}
   m_PrefabInstance: {fileID: 1646041598}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1855394407
