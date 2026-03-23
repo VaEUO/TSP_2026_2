@@ -75,6 +75,9 @@ public class FlightThreadNotSinc : MonoBehaviour
         float yaw = movementInput.x * rotationSpeed * Time.deltaTime;
         this.transform.Rotate(0, yaw, 0);
 
+        //Metodo para la alectura del archivo AC3PTE1
+        TryReadFile();
+
     }
 
     public void SimulateTurbulence(float time)
@@ -101,12 +104,43 @@ public class FlightThreadNotSinc : MonoBehaviour
 
         //Señal en consola de inicio del hilo
         Debug.Log("Iniciando simulación de turbulencia");
+        Debug.Log("Escribiendo archivo...");
 
         //Simula completa
         isTurbulenceRunning = false;
+
+        //Metodo para la alectura del archivo AC3PTE1
+        //Escritura del archivo
+     
+      
+        using (StreamWriter writer = new StreamWriter(filepath,false))
+        {
+            foreach (var force in turbulenceForces)
+            {
+                writer.WriteLine(force.ToString());
+            }
+            writer.Flush() ;
+        }
+        Debug.Log("Archivo escrito");
+
+        //Simula completa
+        isTurbulenceRunning = false;
+
     }
 
+    void TryReadFile()
+    {
+        try
+        {
+            string content = File.ReadAllText(filepath);
+            Debug.Log("Archivo leido" + content);
 
+        }
+        catch (IOException ex)
+        {
+            Debug.LogError("Error de acceso al archivo" + ex.Message);
+        }
+    }
     private void OnDestroy()
     {
         //Indicar el cierre del hilo secundario
